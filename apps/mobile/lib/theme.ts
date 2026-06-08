@@ -1,0 +1,33 @@
+export const colors = {
+  navyDarkest: "#060d1a",
+  navy950: "#060d1a",
+  navy900: "#0b1629",
+  navy800: "#0d1e3f",
+  navy700: "#132042",
+  navy600: "#1e3a6e",
+  white: "#ffffff",
+  slate50: "#f8fafc",
+  slate100: "#f1f5f9",
+  slate400: "#8ba3cc",
+  slate500: "#5270a0",
+  slate600: "#475569",
+  slate700: "#334155",
+  slate900: "#0b1629",
+  emerald500: "#16c784",
+  emerald600: "#16c784",
+  emerald50: "rgba(22, 199, 132, 0.12)",
+  blue600: "#3b82f6",
+  blueDim: "rgba(59, 130, 246, 0.15)",
+  amber600: "#f59e0b",
+  amberDim: "rgba(245, 158, 11, 0.15)",
+  red: "#ea3943",
+  textPrimary: "#f0f4ff",
+  textSecondary: "#8ba3cc",
+  textTertiary: "#5270a0",
+  border: "rgba(139, 163, 204, 0.15)",
+};
+
+export const spacing = {
+  screen: 20,
+  card: 16,
+};

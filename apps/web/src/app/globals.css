@@ -1,0 +1,95 @@
+@import "tailwindcss";
+
+:root {
+  --navy-950: #060d1a;
+  --navy-900: #0b1629;
+  --navy-800: #0d1e3f;
+  --navy-700: #132042;
+  --navy-600: #1e3a6e;
+  --surface: #ffffff;
+  --surface-muted: #f8fafc;
+  --success: #16c784;
+  --success-light: #16c784;
+  --success-bg: rgba(22, 199, 132, 0.12);
+  --success-border: rgba(22, 199, 132, 0.3);
+  --foreground: #f0f4ff;
+  --foreground-muted: #8ba3cc;
+  --card-foreground: #0b1629;
+  --card-muted: #5270a0;
+  --accent: #3b82f6;
+  --accent-hover: #2563eb;
+  --brand-green: #16c784;
+  --destructive: #ea3943;
+  --amber: #f59e0b;
+  --border-navy: rgba(139, 163, 204, 0.15);
+  --border-card: #e2e8f0;
+
+  /* LaneOS design tokens (from Figma Make theme.css) */
+  --lp-navy-darkest: #060d1a;
+  --lp-navy-dark: #0b1629;
+  --lp-navy-mid: #0d1e3f;
+  --lp-navy-panel: #132042;
+  --lp-navy-hover: #1e3a6e;
+  --lp-green: #16c784;
+  --lp-green-dim: rgba(22, 199, 132, 0.15);
+  --lp-red: #ea3943;
+  --lp-red-dim: rgba(234, 57, 67, 0.15);
+  --lp-blue: #3b82f6;
+  --lp-blue-dim: rgba(59, 130, 246, 0.15);
+  --lp-amber: #f59e0b;
+  --lp-amber-dim: rgba(245, 158, 11, 0.15);
+  --lp-text-primary: #f0f4ff;
+  --lp-text-secondary: #8ba3cc;
+  --lp-text-tertiary: #5270a0;
+  --lp-border: rgba(139, 163, 204, 0.15);
+  --lp-border-bright: rgba(139, 163, 204, 0.25);
+}
+
+@theme inline {
+  --color-background: var(--navy-900);
+  --color-foreground: var(--foreground);
+  --color-navy-950: var(--navy-950);
+  --color-navy-900: var(--navy-900);
+  --color-navy-800: var(--navy-800);
+  --color-navy-700: var(--navy-700);
+  --color-surface: var(--surface);
+  --color-surface-muted: var(--surface-muted);
+  --color-success: var(--success);
+  --color-success-light: var(--success-light);
+  --color-success-bg: var(--success-bg);
+  --color-card-foreground: var(--card-foreground);
+  --color-card-muted: var(--card-muted);
+  --color-accent: var(--accent);
+  --color-brand-green: var(--brand-green);
+  --color-destructive: var(--destructive);
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+}
+
+body {
+  background: var(--navy-900);
+  color: var(--foreground);
+  font-family: var(--font-sans), system-ui, sans-serif;
+}
+
+.metric-positive {
+  color: var(--success);
+}
+
+.metric-positive-bg {
+  background: var(--success-bg);
+  color: var(--success);
+}
+
+.surface-card {
+  background: var(--surface);
+  color: var(--card-foreground);
+  border: 1px solid var(--border-card);
+  border-radius: 12px;
+}
+
+.panel-card {
+  background: var(--lp-navy-panel);
+  border: 1px solid var(--lp-border);
+  border-radius: 14px;
+}

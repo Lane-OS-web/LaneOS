@@ -1,0 +1,29 @@
+{
+  "expo": {
+    "name": "LaneOS",
+    "slug": "laneos",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "icon": "./assets/icon.png",
+    "userInterfaceStyle": "dark",
+    "scheme": "laneos",
+    "ios": {
+      "supportsTablet": true,
+      "bundleIdentifier": "com.laneos.app"
+    },
+    "android": {
+      "adaptiveIcon": {
+        "backgroundColor": "#020617",
+        "foregroundImage": "./assets/android-icon-foreground.png",
+        "backgroundImage": "./assets/android-icon-background.png",
+        "monochromeImage": "./assets/android-icon-monochrome.png"
+      },
+      "package": "com.laneos.app",
+      "predictiveBackGestureEnabled": false
+    },
+    "web": {
+      "favicon": "./assets/favicon.png"
+    },
+    "plugins": ["expo-router"]
+  }
+}

@@ -13,5 +13,7 @@ Thumbs.db
 *.log
 .turbo/
 coverage/
-.cursor/
+.cursor/*
+!.cursor/hooks.json
+!.cursor/hooks/
 supabase/.temp/

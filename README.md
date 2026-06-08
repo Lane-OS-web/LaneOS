@@ -116,6 +116,38 @@ npm start
 
 Run migration `supabase/migrations/20250608000001_integrations_and_scanning.sql` after the initial schema.
 
+## Cursor → GitHub → Vercel workflow
+
+Develop in **Cursor**. Changes sync to GitHub automatically; Vercel redeploys on every push.
+
+### Auto-push from Cursor
+
+This repo includes a Cursor **stop hook** (`.cursor/hooks.json`) that commits and pushes when an agent session finishes (including background subagents).
+
+1. Reload Cursor after pulling these files (or restart once).
+2. Confirm hooks are enabled: **Cursor Settings → Hooks**.
+3. Work normally in Agent mode — when the agent stops, changes push to `origin/master` on GitHub.
+
+Override commit identity locally (optional):
+
+```powershell
+$env:LANEOS_GIT_EMAIL = "you@example.com"
+$env:LANEOS_GIT_NAME = "Your Name"
+```
+
+Secrets stay local: `.env.local`, `.env`, and `*.local` are never staged.
+
+### Auto-deploy on Vercel
+
+Connect GitHub once — Vercel deploys on every push:
+
+1. [vercel.com/new](https://vercel.com/new) → Import **Lane-OS-web/LaneOS**
+2. **Root Directory:** `apps/web`
+3. Add production env vars (see Go Live below)
+4. Enable **Production Branch:** `master`
+
+After that: **Cursor edit → hook pushes to GitHub → Vercel builds and deploys** (usually 1–3 minutes).
+
 ## Go Live (Supabase + Vercel)
 
 Supabase is your **backend** (database, auth, storage). The Next.js app still needs a host — **Vercel** is the fastest path and pairs well with Supabase.
